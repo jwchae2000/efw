@@ -27,17 +27,23 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">User</a>
+                    </li>
+                    <% if user_signed_in? %>
+                      <li>
+                          <a class="page-scroll" href="/users/edit">My account</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="/users/sign_out" data-method="delete">Log Out</a>
+                      </li>
+                    <% else %>
+                    <li>
+                        <a class="page-scroll" href="/users/sign_up">Sing up</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="/users/sign_in">Sign in</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
+                    <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -116,8 +122,8 @@
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
                 <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/1.jpg" class="img-responsive" alt="">
+                    <a href="assets/1.jpg" class="portfolio-box">
+                        <img src="assets/thumbnails_1.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -131,8 +137,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/2.jpg" class="img-responsive" alt="">
+                    <a href="assets/2.jpg" class="portfolio-box">
+                        <img src="assets/thumbnails/2.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -146,7 +152,7 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
+                    <a href="assets/3.jpg" class="portfolio-box">
                         <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
