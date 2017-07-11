@@ -15,6 +15,8 @@ gem 'binding_of_caller'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'pg', '~> 0.20.0'
+
 gem 'annotate'
 
 gem 'bootstrap-sass'
