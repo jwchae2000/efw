@@ -9,6 +9,10 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 
+
+gem 'carrierwave', '~> 1.0'
+gem "mini_magick"
+gem "fog-aws"
 gem 'better_errors'
 
 gem 'binding_of_caller'
